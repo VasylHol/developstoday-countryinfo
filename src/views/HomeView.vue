@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div>
+    <SearchInput />
+    <div class="mt-4 grid grid-cols-2 gap-8">
+      <div >
+        <span class="font-semibold text-2xl">Countries list</span>
+        <CountryList />
+      </div>
+      <div>
+        <span class="font-semibold text-2xl">Random Countries Widget</span>
+        <CountryWidgetList/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import SearchInput from "@/components/SearchInput.vue";
+import CountryList from "@/components/CountryList.vue";
+import CountryWidgetList from "@/components/CountryWidgetList.vue";
 
 export default defineComponent({
   name: "HomeView",
   components: {
-    HelloWorld,
+    SearchInput,
+    CountryList,
+    CountryWidgetList
   },
 });
 </script>
